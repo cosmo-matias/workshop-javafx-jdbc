@@ -68,7 +68,7 @@ public class DepartmentFormController implements Initializable {
 		}
 		try {
 			entity = getFormData();
-			service.saveOrUpdade(entity);
+			service.saveOrUpdate(entity);
 			notifyDataChangeListeners();
 			Utils.currentStage(event).close();
 		}
@@ -82,7 +82,7 @@ public class DepartmentFormController implements Initializable {
 	
 	private void notifyDataChangeListeners() {
 		for (DataChangeListener listener : dataChangeListeners) {
-			listener.onDatachenged();
+			listener.onDataChanged();
 		}
 	}
 
